@@ -31,7 +31,6 @@ wxToast.hideLoading([options]};
   * `fali`：`function`，接口调用失败的回调函数，选填；
   * `complete`：`function`，接口调用结束的回调函数（调用成功、失败都会执行），选填。
 
-
 * `wxToast.showLoading([options]);`
 弹出loading提示框。
 
@@ -42,8 +41,7 @@ wxToast.hideLoading([options]};
   * `succcess`：`function`，接口调用成功的回调函数，选填；
   * `fali`：`function`，接口调用失败的回调函数，选填。
   
-  
-  * `wxToast.hideLoading([options]);`
+* `wxToast.hideLoading([options]);`
 隐藏loading提示框。
 
   options:
@@ -53,5 +51,5 @@ wxToast.hideLoading([options]};
   * `complete`：`function`，接口调用结束的回调函数，选填。
   
 ## 注意事项
-  * wxToast.showLoading 和 wxToast.show 同时只能显示一个
-  * wxToast.showLoading 应与 wxToast.hideLoadng 配对使用
+  * `wxToast.showLoading` 和 `wxToast.show` 同时只能显示一个
+  * `wxToast.showLoading` 应与 `wxToast.hideLoadn` 配对使用
