@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font: 100%/1.5 "Roboto", Verdana, sans-serif;
+}
+body {
+  margin: 0;
+  background-color: #eee;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  html,
+  body {
+    height: 100%;
+  }
+  body::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .main {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .title {
+    font-size: 5rem;
+  }
+}
+.main {
+  margin: 1.5rem;
+}
+.title {
+  font-size: 3rem;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #f35626;
+  -webkit-animation: hue 60s infinite linear;
+}
+.form {
+  color: #f35626;
+}
+.form .form-title {
+  font-weight: bold;
+  margin: 0.5rem 0 ;
+  display: inline-block;
+}
+.form .options {
+  text-align: center;
+}
+.form .form-controller {
+  margin: .375rem 0;
+  /* display: inline-block; */
+}
+.form .form-controller .option-name {
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+}
+.form .form-controller .duration {
+  width: 38px;
+}
+.form input {
+  vertical-align: middle;
+}
+.form input[type=text],
+.form select {
+  border: 1px solid #c0c8c9;
+  width: 120px;
+}
+input,
+select,
+button {
+  padding: .5rem;
+  margin: .375rem;
+  background-color: transparent;
+  border-radius: 4px;
+}
+button {
+  border: 2px solid #f35626;
+  line-height: 1.375;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-weight: 700;
+  color: #f35626;
+  cursor: pointer;
+  -webkit-animation: hue 60s infinite linear;
+}
+hr {
+  border: none;
+  margin: 1.5rem 0;
+  height: 2px;
+  -webkit-transform: scale(1, 0.5);
+  transform: scale(1, 0.5);
+  background-color: #c0c8c9;
+  background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+}
+a {
+  color: #7b8993;
+  text-decoration: underline;
+  -webkit-animation: hue 60s infinite linear;
+}
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+/*# sourceMappingURL=demo.css.map */

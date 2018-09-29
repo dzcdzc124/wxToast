@@ -1,0 +1,27 @@
+{
+  "name": "wxtoast",
+  "version": "1.0.0",
+  "description": "微信风格的提示框插件",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzcdzc124/wxToast.git"
+  },
+  "author": "Dantis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzcdzc124/wxToast/issues"
+  },
+  "homepage": "https://github.com/dzcdzc124/wxToast#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-if": "^2.0.2",
+    "gulp-jsbeautifier": "^2.1.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.5"
+  }
+}

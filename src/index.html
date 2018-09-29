@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, target-densitydpi=device-dpi">
+    <title>wxToast.js</title>
+
+    <!--build:css ./css/demo.css -->
+    <link rel="stylesheet" type="text/css" href="./css/demo.css" />
+    <!-- endbuild -->
+
+    <!--build:css ./css/wxToast.min.css -->
+    <link rel="stylesheet" type="text/css" href="./css/wxToast.css" />
+    <!-- endbuild -->
+
+    <!--build:js ./js/wxToast.min.js -->
+    <script src="./js/wxToast.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="main">
+        <div class="title">wxToast.js</div>
+        <div class="form">
+            <span class="form-title">Select Your Options:</span>
+            <div class="options">
+                <div class="form-controller">
+                    <span class="option-name">TITLE:</span>
+                    <input type="text" name="title" placeholder="success" />
+                </div>
+                <div class="form-controller">
+                    <span class="option-name">ICON:</span>
+                    <select name="icon">
+                        <option value="success">success</option>
+                        <option value="warning">warning</option>
+                        <option value="loading">loading</option>
+                        <option value="none">none</option>
+                    </select>
+                </div>
+                <div class="form-controller">
+                    <span class="option-name">DURARION:</span>
+                    <span class="option-name duration">2s</span>
+                    <input type="range" min='0' max='10000' step='500' name="duration" value='2000' />
+                </div>
+                <div class="form-controller">
+                    <span class="option-name">MASK:</span>
+                    <input type="checkbox" name="mask" value='' />
+                </div>
+                <div class="form-controller">
+                    <span class="option-name">EFFECT:</span>
+                    <select name="effect">
+                        <option value="default">default</option>
+                        <option value="fade-out">fade-out</option>
+                        <option value="zoom-out">zoom-out</option>
+                    </select>
+                </div>
+            </div>
+            <button>SHOW !</button>
+        </div>
+        <hr>
+        <p><a href="https://github.com/dzcdzc124/wxToast">View On GitHub</a></p>
+    </div>
+    <script>
+        var range = document.querySelector("input[name=duration]");
+        range.addEventListener("input", function(){
+            document.querySelector(".duration").innerText = (this.value/1000) + 's';
+        })
+        var button= document.querySelector("button");
+        button.addEventListener("click", function(){
+            var options = {
+                title: document.querySelector("input[name=title]").value,
+                icon: document.querySelector("select[name=icon]").value,
+                effect: document.querySelector("select[name=effect]").value,
+                duration: document.querySelector("input[name=duration]").value,
+                mask: Boolean(document.querySelector("input[name=mask]").checked)
+            }
+            console.log(options);
+            wxToast.show(options);
+        })
+    </script>
+</body>
+</html>
