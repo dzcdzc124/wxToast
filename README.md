@@ -53,3 +53,6 @@ wxToast.hideLoading([options]};
 ## 注意事项
   * `wxToast.showLoading` 和 `wxToast.show` 同时只能显示一个
   * `wxToast.showLoading` 应与 `wxToast.hideLoadn` 配对使用
+  
+## Demo
+  * [Click here>>](https://dzcdzc124.github.io/wxToast/dist/index.html)
