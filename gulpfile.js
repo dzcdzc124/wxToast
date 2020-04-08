@@ -13,7 +13,7 @@ gulp.task('watch',  function(){
     gulp.watch('src/**/*.css', ['useref']);
 })
 
-gulp.task('useref', function(){
+gulp.task('useref', async (done) => {
     return gulp.src('src/*.html')
             .pipe(useref())
             .pipe(gulpIf('*.js', uglify()))
@@ -24,10 +24,10 @@ gulp.task('useref', function(){
             .pipe(gulp.dest('dist'));
 })
 
-gulp.task('prettify', function() {
+gulp.task('prettify', async (done) => {
     gulp.src(['./src/**/*.css', './src/*.html', './src/**/*.js'])
         .pipe(prettify())
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['prettify', 'useref'])
+gulp.task('default', gulp.series('prettify', 'useref', done => done() ));

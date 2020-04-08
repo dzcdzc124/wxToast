@@ -33,6 +33,7 @@
   align-items: center;
 }
 .wxToast-default.wxToast-none .wxToast-title {
+  width: 100%;
   margin-top: 0;
 }
 .wxToast-default.wxToast-success {
@@ -175,4 +176,3 @@
     opacity: 0.4;
   }
 }
-/*# sourceMappingURL=wxToast.css.map */

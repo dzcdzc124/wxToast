@@ -133,7 +133,7 @@ show(Object object)
             if(mask){
                 var maskDiv = document.createElement("div");
                 maskDiv.className = "wxToast-mask";
-                maskDiv.appendChild(toastDiv);
+                maskDiv.appendChild(loadingDiv);
             }
 
             return {
@@ -282,6 +282,9 @@ show(Object object)
                     var body = document.body || document.getElementsByTagName('body')[0];
                     switch(params.effect){
                         case "fade-out":
+                            divs.layer.transform = transform;
+                            divs.layer.transition = transition;
+                            
                             divs.layer.style.opacity = 0;
                             divs.layer.transition(300);
                             break;

@@ -37,6 +37,7 @@
 }
 
 .wxToast-default.wxToast-none .wxToast-title {
+    width: 100%;
     margin-top: 0;
 }
 
@@ -200,5 +201,3 @@
         opacity: 0.4;
     }
 }
-
-/*# sourceMappingURL=wxToast.css.map */

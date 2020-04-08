@@ -76,23 +76,9 @@
                 duration: document.querySelector("input[name=duration]").value,
                 mask: Boolean(document.querySelector("input[name=mask]").checked)
             }
-            console.log(options);
+
             wxToast.show(options);
         })
-
-        function onInput(self, e) {
-            /*console.log(e);
-            switch(e.inputType){
-                case "insertCompositionText":
-                    self.value = "";
-                    break;
-                case "insertText":
-                    self.value = e.data; 
-                    break;
-            }*/
-
-            //onInput = function(){}
-        }
     </script>
 </body>
 
